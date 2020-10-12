@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+
+body {
+    margin: 0;
+    background-color: #f4f4f4;
+    font-family: 'Lato', sans-serif;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.line {
+    height: 4px;
+    width: 100px;
+    background: #EDE937;
+    margin-right: 30px;
+}
+
+.subtitle {
+    display: flex;
+    align-items: center;
+    color: #EDE937;
+    grid-column: 1/-1;
+}
+
+.subtitle h2 {
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 24px;
+}
+
+.fact1,
+.fact2,
+.fact3,
+.fact4,
+.fact5,
+.fact6 {
+    position: relative;
+    width: 200px;
+    padding: 20px;
+    margin: 0 50px;
+    color: #004155;
+    font-family: 'Lato', sans-serif;
+}
+
+.fact1 svg,
+.fact2 svg,
+.fact3 svg,
+.fact4 svg,
+.fact5 svg,
+.fact6 svg {
+    position: absolute;
+    height: auto;
+    z-index: -1;
+}
+
+.fact1 svg:nth-child(1) {
+    width: 180px;
+    top: 0;
+    left: -70px;
+}
+
+.fact1 svg:nth-child(2) {
+    right: -20px;
+    top: 80px;
+    width: 80px;
+}
+
+.fact2 svg {
+    width: 200px;
+    top: -20px;
+    left: 0;
+}
+
+.fact3 svg {
+    width: 230px;
+    top: 20px;
+    right: -30px;
+}
+
+.fact4 svg {
+    width: 180px;
+    top: -20px;
+    left: -40px;
+}
+
+.fact5 svg {
+    width: 200px;
+    left: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.fact6 svg:nth-child(1) {
+    width: 200px;
+    top: -20px;
+    right: 0;
+}
+
+.fact6 svg:nth-child(2) {
+    width: 100px;
+    transform: rotate(280deg);
+    left: -30px;
+    top: 10px;
+}
+
+h3 {
+    font-size: 30px;
+    margin: 10px 0;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+span {
+    display: block;
+}
+
+.victories {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    margin: 40px;
+    grid-gap: 0 40px;
+}
+
+/* MEDIA QUERIES */
+
+@media only screen and (min-width: 1068px) {
+    body {
+        width: 1068px;
+        margin: auto;
+    }
+}
