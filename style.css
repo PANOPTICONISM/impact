@@ -2,13 +2,102 @@
 
 body {
     margin: 0;
-    background-color: #f4f4f4;
     font-family: 'Lato', sans-serif;
+    overflow-x: hidden;
 }
 
 img {
     max-width: 100%;
     height: auto;
+}
+
+/* WELCOME */
+
+.item {
+    background-image: url(img/Campaign_BG.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 100px;
+}
+
+.logo {
+    text-align: center;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.campaign {
+    padding: 0px 0 60px 0;
+}
+
+.campaign h1 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 40px;
+    font-weight: 900;
+    color: #EDE937;
+    margin-bottom: 10px;
+}
+
+.campaign p {
+    text-align: center;
+    color: white;
+    width: 220px;
+    margin: auto;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    padding: 5px 32px 5px 12px;
+    color: #004155;
+    font-weight: 600;
+}
+
+button img {
+    width: 20px;
+    margin: 0 10px 0 0;
+}
+
+
+/* VICTORIES */
+
+.victories {
+    background-color: #f4f4f4;
+    position: relative;
+    z-index: -2;
 }
 
 .line {
@@ -68,6 +157,11 @@ img {
     width: 80px;
 }
 
+.fact2,
+.fact6 {
+    margin-top: 35px;
+}
+
 .fact2 svg {
     width: 200px;
     top: -20px;
@@ -80,13 +174,13 @@ img {
     right: -30px;
 }
 
-.fact4 svg {
+.fact5 svg {
     width: 180px;
     top: -20px;
     left: -40px;
 }
 
-.fact5 svg {
+.fact4 svg {
     width: 200px;
     left: 0;
     top: 0;
@@ -127,8 +221,30 @@ span {
 /* MEDIA QUERIES */
 
 @media only screen and (min-width: 1068px) {
-    body {
+    .victories {
         width: 1068px;
         margin: auto;
+    }
+
+    .corner_left {
+        position: absolute;
+        left: 0px;
+        bottom: 0px;
+        transform: rotate(270deg);
+        border-top: 6px solid #3C6359;
+        border-left: 6px solid #3C6359;
+        width: 50px;
+        height: 50px;
+    }
+
+    .corner_right {
+        position: absolute;
+        right: 0px;
+        top: 0px;
+        transform: rotate(90deg);
+        border-top: 6px solid #3C6359;
+        border-left: 6px solid #3C6359;
+        width: 50px;
+        height: 50px;
     }
 }
