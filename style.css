@@ -3,6 +3,7 @@
 body {
     margin: 0;
     font-family: 'Lato', sans-serif;
+    background-color: #f4f4f4;
 }
 
 * {
@@ -20,7 +21,7 @@ img {
     background: url(img/Campaign_BG.png) fixed;
     background-size: auto;
     background-repeat: no-repeat;
-    background-position: center right;
+    background-position: center;
     width: 100%;
     height: 100%;
 }
@@ -54,17 +55,21 @@ nav ul li a {
 }
 
 .campaign {
-    padding: 0px 0 135px 0;
+    padding: 0px 0 200px 0;
 }
 
 .logo {
     text-align: center;
 }
 
+.logo img {
+    max-width: 150px;
+}
+
 .campaign h1 {
     text-align: center;
     text-transform: uppercase;
-    font-size: 40px;
+    font-size: 50px;
     font-weight: 900;
     color: #EDE937;
     margin-bottom: 10px;
@@ -83,7 +88,7 @@ nav ul li a {
     margin: 20px;
 }
 
-button {
+.button button {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -129,10 +134,11 @@ button:hover {
     grid-column: 1/-1;
 }
 
-.subtitle h2 {
+.subtitle h2,
+.expertise h2 {
     text-transform: uppercase;
     font-weight: 900;
-    font-size: 24px;
+    font-size: calc(1vw + 3vh + 1vmin);
 }
 
 .fact1,
@@ -146,7 +152,6 @@ button:hover {
     padding: 20px;
     margin: 0 50px;
     color: #004155;
-    font-family: 'Lato', sans-serif;
 }
 
 .fact1 svg,
@@ -170,11 +175,6 @@ button:hover {
     right: -20px;
     top: 80px;
     width: 80px;
-}
-
-.fact2,
-.fact6 {
-    margin-top: 35px;
 }
 
 .fact2 svg {
@@ -216,7 +216,7 @@ button:hover {
 }
 
 h3 {
-    font-size: 30px;
+    font-size: calc(1vw + 2vh + 0.8vmin);
     margin: 10px 0;
     text-transform: uppercase;
     font-weight: 900;
@@ -226,11 +226,69 @@ span {
     display: block;
 }
 
-.victories {
+.victories,
+.expertise {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     margin: 40px;
     grid-gap: 0 40px;
+}
+
+/* WE WORK WITH */
+
+.climate,
+.sustainability,
+.biodiversity {
+    position: relative;
+    width: 250px;
+    padding: 20px;
+    margin: 20px 50px;
+    color: #004155;
+}
+
+.climate svg,
+.sustainability svg,
+.biodiversity svg {
+    position: absolute;
+    height: auto;
+    z-index: -1;
+}
+
+.climate svg {
+    top: -30px;
+    left: -60px;
+    width: 180px;
+}
+
+.sustainability svg {
+    top: -30px;
+    left: -10px;
+    width: 180px;
+}
+
+.biodiversity svg {
+    top: -40px;
+    right: -18px;
+    width: 180px;
+}
+
+
+.read_more button {
+    font-weight: 100;
+    background-color: #EDE937;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    padding: 5px 12px 5px 12px;
+    color: #004155;
+    cursor: pointer;
+}
+
+.read_more button:hover {
+    opacity: 0.8;
 }
 
 /* MEDIA QUERIES */
@@ -245,9 +303,16 @@ span {
 }
 
 @media only screen and (min-width: 1068px) {
-    .victories {
+
+    .victories,
+    .expertise {
         width: 1068px;
         margin: auto;
+    }
+
+    .fact2,
+    .fact6 {
+        margin-top: 35px;
     }
 
     .corner_left {
